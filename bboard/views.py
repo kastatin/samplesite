@@ -8,6 +8,7 @@ from .models import Rubric
 
 def index(request):
 	bbs = Bb.objects.all()
+	rubrics = Rubric.objects.all()
 	context = {'bbs': bbs, 'rubrics': rubrics}
 	return render(request, 'bboard/index.html', context)
 
